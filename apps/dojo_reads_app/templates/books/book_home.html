@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Layout de Sitio Web con CSS GRID</title>
+		{% load static %}
+        <link rel="stylesheet" href="{% static 'style_index.css' %}">
+        <link rel="stylesheet" href="{% static 'grid_style_book.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+
+	</head>
+	<body>
+		<div class="contenedor">
+			<header class="header">
+				HEADER
+			</header>
+
+			<article class="articulo">
+				ARTICULO
+			</article>
+
+			<main class="contenido">
+				CONTENIDO
+			</main>
+
+			<aside class="sidebar">
+				SIDEBAR
+			</aside>
+
+			<footer class="footer">
+				FOOTER
+			</footer>
+		</div>
+	</body>
+</html>
