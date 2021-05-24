@@ -41,3 +41,22 @@ def success(request, id):
         'user': User.objects.get(id=id)
     }
     return render(request, "success.html", context)
+
+def login(request):
+    if request.method == "POST":
+
+        errors = User.objects.login_validator(request.POST)
+        if len(errors) > 0:
+            for key, value in errors.items():
+                messages.error(request, value)
+            return redirect("/")
+
+        user = User.objects.get(email=request.POST['loginEmail'])
+        if bcrypt.checkpw(request.POST['password'].encode(), user.password.encode()):
+            print("User Password Matches")
+            request.session["id"]=user.id
+            request.session["first_name"]=user.first_name
+            return redirect("/book/book")
+        else:
+            print("User Password Match Fails")
+            return redirect("/")

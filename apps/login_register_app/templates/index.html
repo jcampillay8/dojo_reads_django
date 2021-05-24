@@ -21,11 +21,14 @@
 			<section class="section">
 				{% if messages %}
                 <div class="error-box">
+                    <ul>
                     {% for message in messages %}
-                        <p class="messages-error">{{ message }}</p>
+                        <li class="messages-error">{{ message }}</li>
                     {% endfor %}
+                    </ul>
                 </div>
                 {% endif %}
+                <br><br>
                 <img src="{% static 'codingdojo.jpg' %}" alt="image">
 			</section>
 

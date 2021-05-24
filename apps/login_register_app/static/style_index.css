@@ -11,10 +11,20 @@
 }
 
 .section, .contenido{
-    display: flex;
-    justify-content: center;
+    display: flex;    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
+.error-box {
+    display: block;
+    width: 400px;
+    margin: 0px auto;
+    border-radius: 3px;
+    background: rgb(161, 20, 20);
+    color: #fff;
+}
 
 img{
     width: 400px;
