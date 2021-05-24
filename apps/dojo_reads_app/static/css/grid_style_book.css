@@ -15,19 +15,18 @@ body {
 	max-width: 1200px;
 	margin: 20px auto;
 	display: grid;
-	grid-gap: 20px;
+	/* grid-gap: 20px; */
 	/* grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(4, auto); */
 	grid-template-areas:
-		'header			header   	header'
-		'destacado		destacado 	destacado'
-		'contenido		contenido 	aside'
-		'footer	 		footer 		footer';
+		'header			header   		header			header'
+		'section		section 		contenido		contenido'
+		'footer	 		footer 			footer			footer	';
 }
 
 .contenedor >div,
 .contenedor .header,
-.contenedor .articulo,
+.contenedor .section,
 .contenedor .contenido,
 .contenedor .sidebar,
 .contenedor .footer{
@@ -43,8 +42,8 @@ body {
 }
 
 /* ---------- ARTICULO ----------*/
-.articulo {
-	grid-area: destacado;
+.section {
+	grid-area: section;
 	display: grid;
 	grid-template-columns: 1.3fr 1fr;
 }
@@ -59,20 +58,11 @@ body {
 	grid-gap: 20px; 
 }
 
-/*---------- SIDEBAR ----------*/
-.sidebar {
-	padding: 5em 25px; 
-	text-align: center;
-	min-height: 100px; 
-	grid-area: aside;
-	
-}
-
 
 /*---------- FOOTER ----------*/
 .contenedor .footer {
 	font-size: 20px; 
 	grid-area: footer;
 	padding: 25px; 
-	text-align: right;
+	text-align: center;
 }
