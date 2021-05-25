@@ -42,9 +42,11 @@ body {
 /*---------- CONTENIDO ----------*/
 .contenido {
 	grid-area: contenido;
-	display: grid;
-	grid-template-columns: 1;
-	grid-gap: 20px; 
+	min-height: 400px;
+}
+
+.contenido h1{
+	margin-top: 40px;
 }
 
 

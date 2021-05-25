@@ -43,10 +43,10 @@ body {
 .contenido {
 	grid-area: contenido;
 	display: grid;
-	grid-template-columns: 1;
 	grid-gap: 20px; 
     text-align: center;
     padding: 25px 350px
+	min-height: 400px;
 }
 
 

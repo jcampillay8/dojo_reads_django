@@ -23,7 +23,17 @@
                 {%for review in last_3_reviews%}
                 <div class="paragraph">
                     <h3><a href="/book/{{review.book.id}}">{{review.book.title}}</a></h3>
-                    <p>Rating: {{review.rating}} stars</p><br>
+                    {% if review.rating == 1 %}
+                    <div class="star"><p>Rating: <span>&#9733;</span> stars</p></div>
+                    {% elif review.rating == 2 %}
+                    <div class="star"><p>Rating: <span>&#9733; &#9733;</span> stars</p></div>
+                    {% elif review.rating == 3 %}
+                    <div class="star"><p>Rating: <span>&#9733; &#9733; &#9733;</span>  stars</p></div>
+                    {% elif review.rating == 4 %}
+                    <div class="star"><p>Rating: <span>&#9733; &#9733; &#9733; &#9733;</span>  stars</p></div>
+                    {% elif review.rating == 5 %}
+                    <div class="star"><p>Rating: <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span> stars</p></div>
+                    {% endif %}
                     <p><a href="/users/{{review.poster.id}}">{{review.poster.first_name}}</a> says: {{review.review}}</p><br>
                     <p>Posted on: {{review.created_at|date:"D d M Y"}}</p><br>
                 </div>

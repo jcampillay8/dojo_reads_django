@@ -45,7 +45,8 @@ body {
 .section {
 	grid-area: section;
 	display: grid;
-	grid-template-columns: 1.3fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	min-height: 400px;
 }
 
 
@@ -54,8 +55,10 @@ body {
 .contenido {
 	grid-area: contenido;
 	display: grid;
-	grid-template-columns: 1;
+	grid-template-columns: 1fr 1fr;;
 	grid-gap: 20px; 
+	min-height: 400px;
+	min-height: 400px;
 }
 
 

@@ -10,6 +10,10 @@
     padding-right: 100px;    
 }
 
+.section, .contenido{
+    display: flex;
+    flex-direction: column;
+}
 .btn{
     display: inline-block;
     background:  #045c84;
@@ -55,4 +59,8 @@ select{
 }
 form label{
     font-size: 16pt;    
+}
+
+.star span{
+    color: rgb(255, 166, 0);
 }

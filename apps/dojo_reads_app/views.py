@@ -64,6 +64,11 @@ def delete_review(request, review_id, book_id):
     review_to_delete.delete()
     return redirect(f'/book/{book_id}')
 
+def delete_book(request, book_id):
+    book_to_delete = Book.objects.get(id=book_id)
+    book_to_delete.delete()
+    return redirect('/book/book')
+
 def user(request, id):
     current_user = User.objects.get(id=id)
     # user_reviews = current_user.reviews.all()
